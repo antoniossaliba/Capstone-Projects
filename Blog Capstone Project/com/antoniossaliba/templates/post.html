@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+           </div>
+        <div class="content">
+            {% for pos in posts %}
+                {% if pos["id"] == blog_id %}
+                    <div class="card">
+                        <h2>{{ pos["title"] }}</h2>
+                        <h3>{{ pos["subtitle"] }}</h3>
+                        <p>{{ pos["body"] }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+    </div>
+</div>
+</body>
+<footer>
+    <p>Made with ♥️ in London.</p>
+</footer>
+</html>
