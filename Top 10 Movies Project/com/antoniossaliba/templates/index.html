@@ -1,0 +1,20 @@
+<div class="container">
+  <h1 class="heading">My Top 10 Movies</h1>
+  <p class="description">These are my all-time favourite movies.</p>
+  <hr/>
+  {% for movie in movies %}
+    <img src="{{ movie[7] }}">
+    <h2>Ranking: {{ movie[5] }}</h2>
+    <h1>Title: {{ movie[1] }} ({{ movie[2] }})</h1>
+    <h2>Rating: {{ movie[4] }}</h2>
+    <h2>Review: {{ movie[6] }}</h2>
+    <h2>Description: {{ movie[3] }}</h2>
+    <a href="{{ url_for('update', id=movie[0]) }}">Update the movie's rating and review</a>
+    <br/>
+    <a href="{{ url_for('delete', id=movie[0]) }}">Delete the movie from your top 10 movies list</a>
+    <hr/>
+  {% endfor %}
+</div>
+<div class="container text-center add">
+<a href="{{ url_for('add') }}" class="button">Add Movie</a>
+</div>
