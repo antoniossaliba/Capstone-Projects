@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h2>User Registration</h2>
+    {% for message in get_flashed_messages() %}
+        <p>{{ message }}</p>
+        {{ break }}
+    {% endfor %}
+  <form action="/register" method="POST">
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required><br /><br />
+
+        <label for="password">Password:</label><br />
+        <input type="password" id="password" name="password" required><br /><br />
+
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" required><br /><br />
+
+        <input type="submit" value="Register">
+  </form>
+</body>
+</html>
