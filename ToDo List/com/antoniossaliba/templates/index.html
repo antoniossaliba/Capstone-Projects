@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="../static/main.css" />
+  </head>
+  <body>
+    <h1>Your ToDos</h1>
+    <ul>
+      {% for i in range(len) %}
+        <li><a href="{{ url_for('update_to_do', id=ids[i]) }}">✎<a/> {{todos[i]}} <a href="{{ url_for('delete_to_do', id=ids[i]) }}">╳</a></li>
+      {% endfor %}
+    </ul>
+  <a href="{{ url_for('add_to_do') }}">Add to the list</a>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update your list</title>
+  </head>
+  <body>
+    <form action="/update/{{id}}" method="POST">
+      <label>Update:</label>
+      <input type="text" name="new_to_do" required />
+      <button type="submit">Update</button>
+    </form>
+  </body>
+</html>
